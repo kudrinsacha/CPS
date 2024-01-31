@@ -59,6 +59,8 @@ Thumbs.db
 
 # production
 /build
+app
+/app
 
 # misc
 .env.local
