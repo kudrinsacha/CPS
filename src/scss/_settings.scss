@@ -79,8 +79,7 @@ button:hover {
 }
 
 .expanded {
-  height: auto !important;
-  overflow: initial !important;
+  max-height: 195px !important;
 }
 
 .hidden {

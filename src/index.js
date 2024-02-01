@@ -52,18 +52,20 @@ buttonCloseMenu.onclick = function () {
     overlay.classList.remove('blur')
 }
 buttonOpenFeedback.onclick = function () {
-    feedback.classList.add('active-feedback')
+    feedback.classList.toggle('active-feedback')
+    orderCall.classList.remove('active-feedback')
 }
 buttonCloseFeedback.onclick = function () {
     feedback.classList.remove('active-feedback')
 }
 buttonOpenOrder.onclick = function () {
-    orderCall.classList.add('active-feedback')
+    orderCall.classList.toggle('active-feedback')
+    feedback.classList.remove('active-feedback')
 }
 buttonCloseOrder.onclick = function () {
     orderCall.classList.remove('active-feedback')
 }
-body.onclick = function (e) {
+overlay.onclick = function (e) {
     const withinBoundariesMenu = e.composedPath().includes(menu)
     const withinButtonMenu = e.composedPath().includes(buttonOpenMenu)
     const withinBoundariesFeedback = e.composedPath().includes(feedback)
@@ -80,6 +82,16 @@ body.onclick = function (e) {
         feedback.classList.remove('active-feedback')
     }
     if ( !withinBoundariesOrder && !withinButtonOrder ) {
+        orderCall.classList.remove('active-feedback')
+    }
+}
+menu.onclick = function (e) {
+    const withinBoundariesMenu = e.composedPath().includes(menu)
+    const withinButtonFeedback = e.composedPath().includes(buttonOpenFeedback)
+    const withinButtonOrder = e.composedPath().includes(buttonOpenOrder)
+
+    if ( withinBoundariesMenu && !withinButtonFeedback && !withinButtonOrder) {
+        feedback.classList.remove('active-feedback')
         orderCall.classList.remove('active-feedback')
     }
 }

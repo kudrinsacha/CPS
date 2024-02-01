@@ -92,9 +92,9 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0.2px;
-  height: 90px;
+  max-height: 90px;
   overflow: hidden;
-  transition: height .3s ease 0s;
+  transition: max-height .3s ease 0s;
 }
 
 .section-services__read-more {
