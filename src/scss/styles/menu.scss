@@ -1,0 +1,111 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: space-between;
+  background: $white;
+  margin: 0 -16px;
+  padding: 0 16px;
+  font-weight: 500;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+  width: 320px;
+  height: 100vh;
+  position: fixed;
+  left: -100%;
+  z-index: 2;
+  transition: left .3s ease 0s;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 19px;
+  gap: 24px;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-header__burger {
+  display: flex;
+  gap: 16px;
+}
+
+.menu-main{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-main, .menu-footer__language {
+
+  .radio {
+    position: relative;
+  }
+
+  .radio__text {
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+  }
+
+  .radio__text:hover {
+    color: $menu-text-color;
+    transition: 0.3s;
+  }
+
+  .radio__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  .radio__input:checked + .radio__text {
+    color: $menu-text-color;
+  }
+
+  .menu-main__radio:checked + .radio__text::before {
+    content: '';
+    background-image: url("../assets/img/icon-menuHighlight.svg");
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    top: -5px;
+    left: -16px;
+  }
+}
+
+.menu-footer{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-footer__contacts{
+  display: flex;
+  gap: 16px;
+}
+
+.menu-footer__mail{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.menu-footer__tel{
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+}
+
+.menu-footer__language{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding-bottom: 32px;
+}

@@ -1,0 +1,29 @@
+.header {
+  background: $white;
+  border-bottom: 1px solid $border-color;
+  height: 88px;
+  margin: 0 -16px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header__burger, .header__menu{
+  display: flex;
+  gap: 16px;
+}
+
+.header__divider {
+  width: 2px;
+  height: 32px;
+  border-radius: 1px;
+  background: $divider-color;
+}
+
+@media (min-width: 321px) {
+  .header__divider{
+    display: none;
+  }
+}

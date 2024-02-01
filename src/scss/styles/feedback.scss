@@ -1,0 +1,92 @@
+.feedback {
+  margin: 0 -16px;
+  padding: 0 16px;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+  background: $white;
+  width: 320px;
+  height: 100vh;
+  position: fixed;
+  right: -100%;
+  z-index: 3;
+  transition: right .3s ease 0s;
+}
+
+.feedback__close {
+  margin: 24px 0 40px 0;
+  width: 40px;
+  height: 40px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.feedback__title {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  position: relative;
+}
+
+.feedback__title::before {
+  content: '';
+  background-image: url("../assets/img/icon-highlight.svg");
+  width: 4px;
+  height: 40px;
+  position: absolute;
+  top: -5px;
+  left: -16px;
+}
+
+.feedback__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  input, textarea {
+    border: 1px solid $divider-color;
+    border-radius: 10px;
+    height: 48px;
+    outline: none;
+    position: relative;
+    padding-left: 16px;
+  }
+
+  input::placeholder, textarea::placeholder {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+  }
+
+  textarea {
+    padding-top: 12px;
+  }
+}
+
+.feedback__textarea {
+  height: 118px;
+}
+
+.feedback__info {
+  font-size: 14px;
+  line-height: 16px;
+  color: $menu-text-color;
+
+  span {
+    cursor: pointer;
+    color: $slide-button;
+  }
+}
+
+.feedback__submit {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: $white;
+  padding-left: 12px;
+  align-self: end;
+}

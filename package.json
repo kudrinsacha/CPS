@@ -12,7 +12,7 @@
     "start": "cross-env NODE_ENV=development webpack serve --mode development"
   },
   "keywords": [],
-  "author": "Iraes",
+  "author": "Sacha",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.10",

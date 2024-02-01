@@ -19,6 +19,7 @@ body {
   color: $main-text-color;
   background-color: $background;
   scroll-behavior: smooth;
+  font-weight: 500;
 }
 
 a {
@@ -33,8 +34,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 img {
   height: auto;
-  max-width: 100%;
+  max-width: 100vw;
   object-fit: cover;
+  display: block;
 }
 
 ul {
@@ -43,22 +45,16 @@ ul {
   list-style: none;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+  color: $swiper-bullet-active;
 }
 
 textarea {
   resize: none;
-}
-
-/*Меняем цвет плейсхолдера в инпуте Сафари и Хром*/
-/*Меняем цвет плейсхолдера в инпуте для Мозилы */
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder,
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: $gray;
 }
 
 input:focus,
@@ -78,6 +74,10 @@ button:hover {
   transition: .3s;
 }
 
+.container {
+  padding: 0 16px;
+}
+
 .expanded {
   height: auto !important;
   overflow: initial !important;
@@ -87,18 +87,18 @@ button:hover {
   display: none !important;
 }
 
-.btn--reset {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+.blur {
+  filter: blur(5px);
 }
 
-.btn:active,
-.btn:focus {
-  outline: none;
+.active-menu {
+  left: 16px !important;
 }
 
-.error {
-  border: 2px var(--error-red) solid !important;
+.active-feedback{
+  right: 16px !important;
+}
+
+.lock {
+  overflow: hidden;
 }
