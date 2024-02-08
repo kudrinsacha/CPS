@@ -89,6 +89,9 @@ buttonCloseMenu.onclick = function () {
 buttonOpenFeedback.onclick = buttonOpenFeedbackHeader.onclick = function () {
     body.classList.add('lock')
     overlay.classList.add('blur')
+    if (window.innerWidth > 1339) {
+        menu.classList.add('blur')
+    }
     if (feedback.classList.contains('active-order')) {
         feedback.classList.remove('active-order')
         setTimeout(() => {
@@ -99,6 +102,11 @@ buttonOpenFeedback.onclick = buttonOpenFeedbackHeader.onclick = function () {
                 input.classList.remove('hidden')
             })
         }, 300)
+    } else if(feedback.classList.contains('active-feedback')) {
+        feedback.classList.remove('active-feedback')
+        body.classList.remove('lock')
+        overlay.classList.remove('blur')
+        menu.classList.remove('blur')
     } else {
         feedback.classList.toggle('active-feedback')
         feedbackTitle.classList.remove('hidden')
@@ -107,13 +115,13 @@ buttonOpenFeedback.onclick = buttonOpenFeedbackHeader.onclick = function () {
             input.classList.remove('hidden')
         })
     }
-    if (window.innerWidth > 1339) {
-        menu.classList.add('blur')
-    }
 }
 buttonOrderCall.onclick = buttonOrderCallHeader.onclick = function () {
     body.classList.add('lock')
     overlay.classList.add('blur')
+    if (window.innerWidth > 1339) {
+        menu.classList.add('blur')
+    }
     if (feedback.classList.contains('active-feedback')) {
         feedback.classList.remove('active-feedback')
         setTimeout(() => {
@@ -126,6 +134,11 @@ buttonOrderCall.onclick = buttonOrderCallHeader.onclick = function () {
                 }
             })
         }, 300)
+    } else if(feedback.classList.contains('active-order')) {
+        feedback.classList.remove('active-order')
+        body.classList.remove('lock')
+        overlay.classList.remove('blur')
+        menu.classList.remove('blur')
     } else {
         feedback.classList.toggle('active-order')
         feedbackTitle.classList.add('hidden')
@@ -135,9 +148,6 @@ buttonOrderCall.onclick = buttonOrderCallHeader.onclick = function () {
                 input.classList.add('hidden')
             }
         })
-    }
-    if (window.innerWidth > 1339) {
-        menu.classList.add('blur')
     }
 }
 buttonCloseFeedback.onclick = function () {
