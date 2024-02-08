@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-.slide-menu{
+.slide-menu {
   .radio:hover .radio__input:not(:checked) + .radio__text {
     opacity: 50%;
   }
@@ -86,6 +86,12 @@
   gap: 16px;
 }
 
+.section-services__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .section-services__text {
   font-size: 14px;
   font-style: normal;
@@ -100,6 +106,7 @@
 .section-services__read-more {
   display: flex;
   align-items: center;
+  font-weight: 500;
   gap: 8px;
 }
 
@@ -107,4 +114,99 @@
   min-width: 320px;
   min-height: 176px;
   margin: 0 -16px;
+}
+
+@media (min-width: 470px) {
+  .section-services__info {
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+  .section-services__text {
+    max-height: 157px;
+    max-width: 312px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-services {
+    gap: 32px;
+  }
+  .section-services__picture {
+    min-width: 360px;
+    min-height: 208px;
+    flex-basis: 50%;
+    margin: 0;
+    border-radius: 6px;
+  }
+  .section-services__title::before {
+    left: -24px;
+  }
+  .section-services__wrapper {
+    gap: 10px;
+  }
+  .slide-menu::after {
+    top: 70px;
+    right: -18px;
+  }
+}
+
+@media (min-width: 850px) {
+  .section-services__text {
+    max-width: 490px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-services {
+    margin-top: 42px;
+    gap: 16px;
+  }
+  .section-services__title::before {
+    left: -32px;
+  }
+  .section-services__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-services__buttons {
+    display: flex !important;
+    gap: 32px;
+  }
+  .section-services__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      font-weight: 500;
+    }
+  }
+  .slide-menu {
+    overflow: initial;
+    height: initial;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    width: 1072px;
+
+    .radio__text {
+      padding: 7px 18px;
+    }
+  }
+
+  .section-services__text{
+    max-height: 159px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .section-services__text {
+    max-width: 750px;
+  }
+  .section-services__picture {
+    flex-basis: 45%;
+  }
 }

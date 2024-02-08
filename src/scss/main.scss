@@ -15,3 +15,15 @@
   flex-direction: column;
   gap: 24px;
 }
+
+@media (min-width: 768px) {
+ .main{
+   gap: 32px;
+ }
+}
+
+@media (min-width: 1440px) {
+  .main{
+    gap: 50px;
+  }
+}

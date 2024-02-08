@@ -1,10 +1,10 @@
 .feedback {
   margin: 0 -16px;
   padding: 0 16px;
-  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+  box-shadow: -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
   background: $white;
   width: 320px;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   right: -100%;
   z-index: 3;
@@ -62,12 +62,9 @@
   }
 
   textarea {
+    height: 118px;
     padding-top: 12px;
   }
-}
-
-.feedback__textarea {
-  height: 118px;
 }
 
 .feedback__info {
@@ -89,4 +86,33 @@
   color: $white;
   padding-left: 12px;
   align-self: end;
+}
+
+@media (min-width: 768px) {
+  .feedback {
+    margin: 0 -24px;
+    padding: 0 24px;
+  }
+  .feedback__title::before {
+    left: -24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .feedback {
+    width: 440px;
+    margin: 0 -32px;
+    padding: 0 32px;
+  }
+  .feedback__title::before {
+    left: -32px;
+  }
+  .feedback__close {
+    position: absolute;
+    right: 472px;
+    top: 10px
+  }
+  .feedback__form {
+    margin-top: 40px;
+  }
 }

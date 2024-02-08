@@ -94,42 +94,19 @@
         <form class="feedback__form" action="">
 
             <div class="feedback__title">Обратная связь</div>
+            <div class="feedback__title order-call__title hidden">Заказать звонок</div>
             <div class="feedback__inputs">
-                <label>
+                <label class="feedback__name">
                     <input type="text" placeholder="Имя">
                 </label>
-                <label>
+                <label class="feedback__tel">
                     <input type="tel" placeholder="Телефон">
                 </label>
-                <label>
+                <label class="feedback__email">
                     <input type="email" placeholder="Электронная почта">
                 </label>
-                <label>
+                <label class="feedback__message">
                     <textarea class="feedback__textarea" placeholder="Сообщение"></textarea>
-                </label>
-                <div class="feedback__info">
-                    Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь
-                    с
-                    нашей <span>политикой
-                конфиденциальности</span>
-                </div>
-                <button class="slide-button feedback__submit">
-                    <span>Отправить</span>
-                    <img src="./assets/img/icon-goside.svg" alt="">
-                </button>
-            </div>
-
-        </form>
-    </aside>
-
-    <aside class="feedback order-call">
-        <button class="feedback__close order-call__close"><img src="./assets/img/icon-close.svg" alt=""></button>
-        <form class="feedback__form order-call__form" action="">
-
-            <div class="feedback__title">Заказать звонок</div>
-            <div class="feedback__inputs">
-                <label>
-                    <input type="tel" placeholder="Телефон">
                 </label>
                 <div class="feedback__info">
                     Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь
@@ -151,10 +128,17 @@
         <header class="header">
             <div class="header__burger">
                 <button><img class="button__burger" src="./assets/img/icon-burger.svg" alt=""></button>
+                <div class="header__divider header__divider_hidden"></div>
                 <img src="./assets/img/logo.svg" alt="">
             </div>
             <div class="header__divider"></div>
             <div class="header__menu">
+                <button class="header__img button__header-order-call hidden"><img src="./assets/img/icon-call.svg"
+                                                                                  alt=""></button>
+                <button class="header__img button__header-feedback hidden"><img src="assets/img/icon-chat.svg" alt="">
+                </button>
+                <button class="header__img hidden"><img src="assets/img/icon-profile.svg" alt=""></button>
+                <div class="header__divider header__divider_hidden"></div>
                 <button><img src="./assets/img/icon-repair.svg" alt=""></button>
                 <button><img src="assets/img/icon-checkStatus.svg" alt=""></button>
             </div>
@@ -165,7 +149,19 @@
 
             <section class="section-services">
 
-                <h1 class="section-services__title">Услуги и сервисы</h1>
+                <div class="section-services__header">
+                    <h1 class="section-services__title">Услуги и сервисы</h1>
+                    <div class="section-services__buttons hidden">
+                        <button class="section-services__button">
+                            <span>Оставить заявку</span>
+                            <img src="./assets/img/icon-repair.svg" alt="">
+                        </button>
+                        <button class="section-services__button">
+                            <span>Статус ремонта</span>
+                            <img src="./assets/img/icon-checkStatus.svg" alt="">
+                        </button>
+                    </div>
+                </div>
 
                 <div class="slide-menu">
 
@@ -197,21 +193,30 @@
                 </div>
 
                 <div class="section-services__info">
-                    <div class="section-services__text">
-                        Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-                        Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-
-                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
-                        большое
-                        количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
-                        очередь, советуют нас родным и близким.
+                    <div class="section-services__wrapper">
+                        <div class="section-services__text">
+                            Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+                            Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
+                            производителя.<br><br>
+                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
+                            большое
+                            количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в
+                            свою
+                            очередь, советуют нас родным и близким.<br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo hic illum molestiae odio
+                            tempora? Aut excepturi explicabo quae! Asperiores cum optio placeat quae quas, qui sit
+                            suscipit veritatis vitae voluptatibus?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad aliquid cupiditate deleniti
+                            distinctio dolore, eos eum eveniet maiores mollitia nihil non odit officia quam quos
+                            repellat sequi! Amet, nihil.
+                        </div>
+                        <button class="section-services__read-more">
+                            <img src="./assets/img/icon-expand.svg" alt="">
+                            <span>Читать далее</span>
+                            <img class="hidden" src="./assets/img/icon-expandHide.svg" alt="">
+                            <span class="hidden">Скрыть</span>
+                        </button>
                     </div>
-                    <button class="section-services__read-more">
-                        <img src="./assets/img/icon-expand.svg" alt="">
-                        <span>Читать далее</span>
-                        <img class="hidden" src="./assets/img/icon-expandHide.svg" alt="">
-                        <span class="hidden">Скрыть</span>
-                    </button>
                     <img class="section-services__picture" src="./assets/img/picture-cps.png" alt="">
                 </div>
 
@@ -223,7 +228,7 @@
                     <span class="slider__title">Ремонт техники различных брендов</span>
                 </header>
 
-                <div class="swiper swiper-brands">
+                <div class="swiper swiper-brands" data-mobile="true">
 
                     <div class="swiper-wrapper">
 
@@ -306,6 +311,13 @@
 
                 </div>
 
+                <button class="swiper-show swiper-brands-show hidden">
+                    <img src="./assets/img/icon-expand.svg" alt="">
+                    <img class="hidden" src="./assets/img/icon-expandHide.svg" alt="">
+                    <span>Показать все</span>
+                    <span class="hidden">Скрыть</span>
+                </button>
+
             </section>
 
             <section class="slider">
@@ -314,7 +326,7 @@
                     <span class="slider__title">Ремонт различных видов техники</span>
                 </header>
 
-                <div class="swiper">
+                <div class="swiper swiper-technique" data-mobile="true">
 
                     <div class="swiper-wrapper">
 
@@ -397,6 +409,13 @@
 
                 </div>
 
+                <button class="swiper-show swiper-technique-show hidden">
+                    <img src="./assets/img/icon-expand.svg" alt="">
+                    <img class="hidden" src="./assets/img/icon-expandHide.svg" alt="">
+                    <span>Показать все</span>
+                    <span class="hidden">Скрыть</span>
+                </button>
+
             </section>
 
             <section class="slider">
@@ -405,108 +424,125 @@
                     <span class="slider__title">Цены на услуги</span>
                 </header>
 
-                <div class="swiper">
+                <div class="prices-titles hidden">
+                    <div class="prices-titles__title">Ремонтные услуги</div>
+                    <div class="prices-titles__title">Цена</div>
+                    <div class="prices-titles__title">Срок</div>
+                </div>
 
-                    <div class="swiper-wrapper">
+                <div class="swiper" data-mobile="true">
+
+                    <div class="swiper-wrapper swiper-prices">
+
 
                         <div class="swiper-slide swiper-prices-slide"> <!-- 1 -->
-                            <div class="slide-section">
-                                <div class="slide-section-title">Ремонтные услуги</div>
-                                <div class="slide-section-text">Тестирование с выдачей технического заключения</div>
-                            </div>
-                            <div class="slide-section">
-                                <div class="slide-section-title">Цена</div>
-                                <div class="slide-section-text">Бесплатно</div>
-                            </div>
-                            <div class="slide-section-button">
-                                <div class="slide-section">
-                                    <div class="slide-section-title">Срок</div>
-                                    <div class="slide-section-text">30-120 мин</div>
+                            <div class="swiper-prices-wrapper">
+                                <div class="slide-section slide-section-service">
+                                    <div class="slide-section-title">Ремонтные услуги</div>
+                                    <div class="slide-section-text">Тестирование с выдачей технического заключения</div>
                                 </div>
-                                <button class="slide-button">
-                                    <span class="slide-button-text">Заказать</span>
-                                    <img src="./assets/img/icon-goside.svg" alt="">
-                                </button>
+                                <div class="slide-section slide-section-price">
+                                    <div class="slide-section-title">Цена</div>
+                                    <div class="slide-section-text">Бесплатно</div>
+                                </div>
+                                <div class="slide-section-button">
+                                    <div class="slide-section slide-section-time">
+                                        <div class="slide-section-title">Срок</div>
+                                        <div class="slide-section-text">30-120 мин</div>
+                                    </div>
+                                    <button class="slide-button">
+                                        <span class="slide-button-text">Заказать</span>
+                                        <img src="./assets/img/icon-goside.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide swiper-prices-slide"> <!-- 2 -->
-                            <div class="slide-section">
-                                <div class="slide-section-title">Ремонтные услуги</div>
-                                <div class="slide-section-text">Диагностика</div>
-                            </div>
-                            <div class="slide-section">
-                                <div class="slide-section-title">Цена</div>
-                                <div class="slide-section-text">Бесплатно</div>
-                            </div>
-                            <div class="slide-section-button">
-                                <div class="slide-section">
-                                    <div class="slide-section-title">Срок</div>
-                                    <div class="slide-section-text">30 мин</div>
+                            <div class="swiper-prices-wrapper">
+                                <div class="slide-section slide-section-service">
+                                    <div class="slide-section-title">Ремонтные услуги</div>
+                                    <div class="slide-section-text">Диагностика</div>
                                 </div>
-                                <button class="slide-button">
-                                    <span class="slide-button-text">Заказать</span>
-                                    <img src="./assets/img/icon-goside.svg" alt="">
-                                </button>
+                                <div class="slide-section slide-section-price">
+                                    <div class="slide-section-title">Цена</div>
+                                    <div class="slide-section-text">Бесплатно</div>
+                                </div>
+                                <div class="slide-section-button">
+                                    <div class="slide-section slide-section-time">
+                                        <div class="slide-section-title">Срок</div>
+                                        <div class="slide-section-text">30 мин</div>
+                                    </div>
+                                    <button class="slide-button">
+                                        <span class="slide-button-text">Заказать</span>
+                                        <img src="./assets/img/icon-goside.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide swiper-prices-slide"> <!-- 3 -->
-                            <div class="slide-section">
-                                <div class="slide-section-title">Ремонтные услуги</div>
-                                <div class="slide-section-text">Замена дисплея</div>
-                            </div>
-                            <div class="slide-section">
-                                <div class="slide-section-title">Цена</div>
-                                <div class="slide-section-text">1 000 ₽</div>
-                            </div>
-                            <div class="slide-section-button">
-                                <div class="slide-section">
-                                    <div class="slide-section-title">Срок</div>
-                                    <div class="slide-section-text">30-120 мин</div>
+                            <div class="swiper-prices-wrapper">
+                                <div class="slide-section slide-section-service">
+                                    <div class="slide-section-title">Ремонтные услуги</div>
+                                    <div class="slide-section-text">Замена дисплея</div>
                                 </div>
-                                <button class="slide-button">
-                                    <span class="slide-button-text">Заказать</span>
-                                    <img src="./assets/img/icon-goside.svg" alt="">
-                                </button>
+                                <div class="slide-section slide-section-price">
+                                    <div class="slide-section-title">Цена</div>
+                                    <div class="slide-section-text">1 000 ₽</div>
+                                </div>
+                                <div class="slide-section-button">
+                                    <div class="slide-section slide-section-time">
+                                        <div class="slide-section-title">Срок</div>
+                                        <div class="slide-section-text">30-120 мин</div>
+                                    </div>
+                                    <button class="slide-button">
+                                        <span class="slide-button-text">Заказать</span>
+                                        <img src="./assets/img/icon-goside.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide swiper-prices-slide"> <!-- 4 -->
-                            <div class="slide-section">
-                                <div class="slide-section-title">Ремонтные услуги</div>
-                                <div class="slide-section-text">Замена полифонического динамика</div>
-                            </div>
-                            <div class="slide-section">
-                                <div class="slide-section-title">Цена</div>
-                                <div class="slide-section-text">1 000 ₽</div>
-                            </div>
-                            <div class="slide-section-button">
-                                <div class="slide-section">
-                                    <div class="slide-section-title">Срок</div>
-                                    <div class="slide-section-text">30-120 мин</div>
+                            <div class="swiper-prices-wrapper">
+                                <div class="slide-section slide-section-service">
+                                    <div class="slide-section-title">Ремонтные услуги</div>
+                                    <div class="slide-section-text">Замена полифонического динамика</div>
                                 </div>
-                                <button class="slide-button">
-                                    <span class="slide-button-text">Заказать</span>
-                                    <img src="./assets/img/icon-goside.svg" alt="">
-                                </button>
+                                <div class="slide-section slide-section-price">
+                                    <div class="slide-section-title">Цена</div>
+                                    <div class="slide-section-text">1 000 ₽</div>
+                                </div>
+                                <div class="slide-section-button">
+                                    <div class="slide-section slide-section-time">
+                                        <div class="slide-section-title">Срок</div>
+                                        <div class="slide-section-text">30-120 мин</div>
+                                    </div>
+                                    <button class="slide-button">
+                                        <span class="slide-button-text">Заказать</span>
+                                        <img src="./assets/img/icon-goside.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide swiper-prices-slide"> <!-- 5 -->
-                            <div class="slide-section">
-                                <div class="slide-section-title">Ремонтные услуги</div>
-                                <div class="slide-section-text">Замена программного обеспечения</div>
-                            </div>
-                            <div class="slide-section">
-                                <div class="slide-section-title">Цена</div>
-                                <div class="slide-section-text">1 000 ₽</div>
-                            </div>
-                            <div class="slide-section-button">
-                                <div class="slide-section">
-                                    <div class="slide-section-title">Срок</div>
-                                    <div class="slide-section-text">30-120 мин</div>
+                            <div class="swiper-prices-wrapper swiper-prices-wrapper_border-none">
+                                <div class="slide-section slide-section-service">
+                                    <div class="slide-section-title">Ремонтные услуги</div>
+                                    <div class="slide-section-text">Замена программного обеспечения</div>
                                 </div>
-                                <button class="slide-button">
-                                    <span class="slide-button-text">Заказать</span>
-                                    <img src="./assets/img/icon-goside.svg" alt="">
-                                </button>
+                                <div class="slide-section slide-section-price">
+                                    <div class="slide-section-title">Цена</div>
+                                    <div class="slide-section-text">1 000 ₽</div>
+                                </div>
+                                <div class="slide-section-button">
+                                    <div class="slide-section slide-section-time">
+                                        <div class="slide-section-title">Срок</div>
+                                        <div class="slide-section-text">30-120 мин</div>
+                                    </div>
+                                    <button class="slide-button">
+                                        <span class="slide-button-text">Заказать</span>
+                                        <img src="./assets/img/icon-goside.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
                         </div>
 

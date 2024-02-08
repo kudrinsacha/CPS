@@ -79,7 +79,7 @@ button:hover {
 }
 
 .expanded {
-  max-height: 195px !important;
+  max-height: 232px !important;
 }
 
 .hidden {
@@ -94,10 +94,47 @@ button:hover {
   left: 16px !important;
 }
 
-.active-feedback{
+.active-feedback {
+  right: 16px !important;
+}
+
+.active-order {
   right: 16px !important;
 }
 
 .lock {
   overflow: hidden;
+}
+
+.open-brands {
+  max-height: 344px !important;
+}
+
+.open-technique {
+  max-height: 696px !important;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .active-menu {
+    left: 24px !important;
+  }
+  .active-feedback {
+    right: 24px !important;
+  }
+  .active-order {
+    right: 24px !important;
+  }
+  .expanded {
+    max-height: 237px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    margin-left: 320px;
+    padding: 0 32px;
+  }
 }
