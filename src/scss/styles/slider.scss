@@ -347,6 +347,10 @@
 }
 
 @media (min-width: 1440px) {
+  .slider__header {
+    margin: 0 -32px;
+    padding: 16px 32px;
+  }
   .swiper-brands-slide, .swiper-technique-slide{
     width: 238px !important;
   }
